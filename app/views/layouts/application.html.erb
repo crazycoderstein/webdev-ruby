@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blog</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Eduardo Lemos Portfolio</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    
-    <%= render 'home/header' %>
-    <%= render 'home/jumbotron' %>
-    <div class="container">
-      <%= yield %>
-    </div>
-    
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+         
+</head>
+
+
+<body>
+  
+  <%= render 'home/header' %>
+  <!--For each instance of a flash, shows the respective alert message-->
+  <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class:"alert alert-info") %>
+  <% end %>
+  
+
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+</body>
+
 </html>

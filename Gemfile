@@ -41,6 +41,9 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 #Use Jquery for rails
 gem 'jquery-rails'
 
+#Flexible authentication solution for rails with Warden
+gem 'devise', '~> 4.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

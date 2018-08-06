@@ -1,2 +1,11 @@
+$navbar-height:50px;
+$navbar-default-bg: rgb(128, 203, 185);
+$jumbotron-bg:  rgb(128, 203, 185);
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+
+.center {
+    text-align: center;
+}
