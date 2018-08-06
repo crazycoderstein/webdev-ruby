@@ -22,6 +22,8 @@
         <% if user_signed_in? %>
           <li class=""><%= link_to 'Edit', edit_user_registration_path %>   </li>
           <li class=""><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+          <li class=""><%= link_to 'Posts', posts_path %></li>
+          <li class=""><%= link_to 'New Post', new_post_path %></li>
         <% else %>
           <li class=""><%= link_to 'Sign up', new_user_registration_path %></li>
           <li class=""><%= link_to 'Sign in', new_user_session_path %></li>
