@@ -1,5 +1,5 @@
 <div class="panel-body">
-  <%= form_for(@post) do |form| %>
+  <%= form_for @post, html: {multipart:true} do |form| %>
     <% if post.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -15,13 +15,18 @@
       </div>
     <% end %>
 
-        <div class="form">
-          <%= form.label :description %>
-            <%= form.text_field :description, class:'form-control'%>
-        </div>
+    <div class="form">
+      <%= form.label :description %>
+      <%= form.text_field :description, class:'form-control'%>
+    </div>
 
-        <div class="actions">
-          <%= form.submit 'Submit', class:'btn btn-primary' %>
-        </div>
+    <div class="form">
+      <%= form.label :image %>
+      <%= form.file_field :image, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Submit', class:'btn btn-primary' %>
+    </div>
   <% end %>
 </div>
