@@ -39,12 +39,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 #Use Jquery for rails
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 #Flexible authentication solution for rails with Warden
 gem 'devise', '~> 4.2'
 
 gem 'paperclip', '~> 6.1'
+
+gem 'jquery-turbolinks', '~> 2.1'
+
+gem 'masonry-rails', '~> 0.2.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
